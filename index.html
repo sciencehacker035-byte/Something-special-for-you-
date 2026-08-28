@@ -1,0 +1,2379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color"
+      content="#09070d">
+
+<title>For Nainshi ❤️</title>
+
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#09070d;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    overflow-x:hidden;
+}
+
+
+/* =====================================================
+   INTRO SCREEN
+===================================================== */
+
+#intro{
+
+    position:fixed;
+    inset:0;
+
+    z-index:99999;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #612342 0%,
+            #281321 38%,
+            #09070d 75%
+        );
+
+    transition:
+        opacity 1.5s ease,
+        transform 1.5s ease,
+        visibility 1.5s ease;
+}
+
+#intro.hide{
+    opacity:0;
+    visibility:hidden;
+    transform:scale(1.08);
+    pointer-events:none;
+}
+
+.intro-content{
+    width:90%;
+    max-width:600px;
+
+    animation:introAppear 2s ease;
+}
+
+@keyframes introAppear{
+
+    from{
+        opacity:0;
+        transform:
+            translateY(35px)
+            scale(.95);
+    }
+
+    to{
+        opacity:1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+.intro-line{
+
+    width:45px;
+    height:1px;
+
+    margin:
+        0 auto 25px;
+
+    background:#e9a8c6;
+
+    opacity:.7;
+}
+
+.intro-small{
+
+    font-size:10px;
+
+    letter-spacing:5px;
+
+    color:#cdaabd;
+
+    text-transform:uppercase;
+}
+
+.intro-name{
+
+    margin:12px 0 20px;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-style:italic;
+
+    font-size:
+        clamp(65px,18vw,115px);
+
+    font-weight:400;
+
+    color:#f6c8dc;
+
+    text-shadow:
+        0 0 20px #ff6ead88,
+        0 0 50px #ff4c9d55;
+}
+
+.intro-text{
+
+    color:#cbb6c4;
+
+    font-size:14px;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+}
+
+.enter-btn{
+
+    padding:
+        16px 30px;
+
+    border-radius:50px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.20);
+
+    background:
+        rgba(255,255,255,.07);
+
+    color:white;
+
+    font-size:12px;
+
+    letter-spacing:1.5px;
+
+    cursor:pointer;
+
+    backdrop-filter:blur(15px);
+
+    transition:.4s;
+}
+
+.enter-btn:hover{
+
+    background:
+        rgba(255,255,255,.14);
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(255,100,170,.15);
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+#main{
+
+    opacity:0;
+
+    transition:
+        opacity 2s ease;
+}
+
+#main.show{
+    opacity:1;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    min-height:100svh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(121,44,82,.42),
+            transparent 55%
+        );
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:10;
+
+    animation:
+        heroReveal 2s ease;
+}
+
+@keyframes heroReveal{
+
+    from{
+        opacity:0;
+        transform:
+            translateY(35px);
+    }
+
+    to{
+        opacity:1;
+        transform:
+            translateY(0);
+    }
+}
+
+.hero-date{
+
+    font-size:10px;
+
+    letter-spacing:5px;
+
+    color:#b98da4;
+
+    margin-bottom:22px;
+}
+
+.hero h1{
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-weight:400;
+
+    font-size:
+        clamp(48px,13vw,100px);
+
+    line-height:1.05;
+
+    color:#f5d7e4;
+
+    text-shadow:
+        0 0 30px
+        rgba(255,120,180,.45);
+}
+
+.hero-name{
+
+    margin-top:10px;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-style:italic;
+
+    font-size:
+        clamp(32px,8vw,60px);
+
+    color:#e8a9c6;
+}
+
+.hero-description{
+
+    max-width:530px;
+
+    margin:
+        28px auto 0;
+
+    color:#aa9ba7;
+
+    font-size:14px;
+
+    line-height:1.9;
+}
+
+.scroll{
+
+    position:absolute;
+
+    bottom:30px;
+
+    left:50%;
+
+    transform:
+        translateX(-50%);
+
+    color:#766b76;
+
+    font-size:9px;
+
+    letter-spacing:4px;
+
+    animation:
+        scrollMove 2s infinite;
+}
+
+@keyframes scrollMove{
+
+    50%{
+        transform:
+            translate(-50%,9px);
+    }
+}
+
+
+/* =====================================================
+   FLOATING BALLOONS
+===================================================== */
+
+.balloon-area{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+}
+
+.balloon{
+
+    position:absolute;
+
+    bottom:-130px;
+
+    width:58px;
+
+    height:74px;
+
+    border-radius:
+        50% 50%
+        48% 48%
+        45% 45%;
+
+    background:
+
+        radial-gradient(
+            circle at 30% 25%,
+            #fff,
+            #ff88bd 20%,
+            #d52d78 75%
+        );
+
+    box-shadow:
+        0 0 25px
+        rgba(255,85,160,.25);
+
+    animation:
+        balloonRise
+        12s linear infinite;
+
+    cursor:pointer;
+
+    pointer-events:auto;
+}
+
+.balloon::before{
+
+    content:"♥";
+
+    position:absolute;
+
+    left:50%;
+
+    top:25px;
+
+    transform:
+        translateX(-50%);
+
+    color:#ffffff99;
+
+    font-size:18px;
+}
+
+.balloon::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:1px;
+
+    height:90px;
+
+    background:#ffffff45;
+
+    left:50%;
+
+    top:73px;
+}
+
+.balloon:nth-child(1){
+    left:6%;
+    animation-delay:0s;
+}
+
+.balloon:nth-child(2){
+    left:23%;
+    animation-delay:4s;
+    transform:scale(.75);
+}
+
+.balloon:nth-child(3){
+    right:22%;
+    animation-delay:2s;
+    transform:scale(.8);
+}
+
+.balloon:nth-child(4){
+    right:6%;
+    animation-delay:6s;
+}
+
+@keyframes balloonRise{
+
+    0%{
+        bottom:-150px;
+        opacity:0;
+        transform:
+            translateX(0)
+            rotate(-5deg);
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    50%{
+        transform:
+            translateX(25px)
+            rotate(6deg);
+    }
+
+    100%{
+        bottom:110%;
+        opacity:0;
+        transform:
+            translateX(-20px)
+            rotate(-5deg);
+    }
+}
+
+.balloon.popped{
+
+    animation:
+        balloonPop
+        .35s ease forwards;
+}
+
+@keyframes balloonPop{
+
+    0%{
+        transform:scale(1);
+    }
+
+    45%{
+        transform:scale(1.5);
+    }
+
+    100%{
+        transform:scale(0);
+        opacity:0;
+    }
+}
+
+
+/* =====================================================
+   COMMON SECTION
+===================================================== */
+
+.section{
+
+    min-height:80vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:
+        100px 22px;
+}
+
+.container{
+
+    width:100%;
+
+    max-width:850px;
+
+    text-align:center;
+}
+
+.eyebrow{
+
+    color:#b57f9b;
+
+    font-size:9px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+}
+
+.title{
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(36px,9vw,62px);
+
+    font-weight:400;
+
+    line-height:1.2;
+
+    color:#efd3df;
+}
+
+.description{
+
+    max-width:650px;
+
+    margin:
+        25px auto 0;
+
+    color:#a99aa6;
+
+    font-size:14px;
+
+    line-height:2;
+}
+
+
+/* =====================================================
+   SPECIAL MESSAGE
+===================================================== */
+
+.special{
+
+    min-height:75vh;
+}
+
+.special-card{
+
+    margin-top:50px;
+
+    padding:
+        45px 28px;
+
+    border-radius:25px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.06),
+            rgba(255,255,255,.015)
+        );
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.35);
+}
+
+.special-card p{
+
+    color:#cbbcc6;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:17px;
+
+    line-height:2;
+}
+
+.special-card strong{
+
+    color:#efc2d7;
+
+    font-weight:400;
+}
+
+
+/* =====================================================
+   CAKE SECTION
+===================================================== */
+
+.cake-section{
+
+    min-height:100svh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:
+        70px 20px;
+}
+
+.cake-container{
+
+    width:100%;
+
+    max-width:700px;
+}
+
+.cake-area{
+
+    height:390px;
+
+    margin-top:45px;
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:center;
+
+    flex-direction:column;
+}
+
+
+/* =====================================================
+   CAKE
+===================================================== */
+
+.cake{
+
+    position:relative;
+
+    width:250px;
+
+    height:125px;
+
+    border-radius:
+        20px 20px
+        13px 13px;
+
+    background:
+        linear-gradient(
+            #f49abd,
+            #c94b7d
+        );
+
+    box-shadow:
+        0 25px 45px
+        rgba(0,0,0,.5);
+}
+
+.cake-top{
+
+    position:absolute;
+
+    top:-3px;
+
+    left:0;
+
+    width:100%;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            #fff5f9,
+            #ffc6dc
+        );
+}
+
+.cream{
+
+    position:absolute;
+
+    top:34px;
+
+    left:0;
+
+    width:100%;
+
+    height:28px;
+
+    background:#fff1f6;
+
+    border-radius:
+        0 0 50% 50%;
+}
+
+.cake-line{
+
+    position:absolute;
+
+    top:72px;
+
+    left:0;
+
+    width:100%;
+
+    height:2px;
+
+    background:#ffffff55;
+}
+
+.cake-message{
+
+    position:absolute;
+
+    bottom:17px;
+
+    width:100%;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:17px;
+
+    color:white;
+}
+
+
+/* =====================================================
+   CANDLE
+===================================================== */
+
+.candle{
+
+    position:absolute;
+
+    bottom:255px;
+
+    width:22px;
+
+    height:88px;
+
+    border-radius:5px;
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #fff0f6,
+            #fff0f6 7px,
+            #ec8eb5 7px,
+            #ec8eb5 14px
+        );
+
+    box-shadow:
+        0 4px 12px
+        rgba(0,0,0,.35);
+}
+
+.candle::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-9px;
+
+    left:50%;
+
+    width:2px;
+
+    height:12px;
+
+    background:#222;
+
+    transform:
+        translateX(-50%);
+}
+
+
+/* =====================================================
+   FLAME
+===================================================== */
+
+.flame{
+
+    position:absolute;
+
+    top:-49px;
+
+    left:50%;
+
+    transform:
+        translateX(-50%);
+
+    width:31px;
+
+    height:45px;
+
+    border-radius:
+        50% 50%
+        50% 50%;
+
+    background:
+        radial-gradient(
+            ellipse at center bottom,
+            white 5%,
+            #ffe15b 28%,
+            #ff762b 60%,
+            transparent 72%
+        );
+
+    filter:
+        drop-shadow(
+            0 0 15px
+            #ff9b3d
+        );
+
+    animation:
+        flameMove
+        .15s infinite alternate;
+
+    transition:.5s;
+}
+
+@keyframes flameMove{
+
+    from{
+        transform:
+            translateX(-50%)
+            scale(1)
+            rotate(-3deg);
+    }
+
+    to{
+        transform:
+            translateX(-50%)
+            scale(1.08)
+            rotate(3deg);
+    }
+}
+
+.flame.off{
+
+    opacity:0;
+
+    transform:
+        translateX(-50%)
+        scale(.15);
+
+    animation:none;
+}
+
+
+/* =====================================================
+   SMOKE
+===================================================== */
+
+.smoke{
+
+    position:absolute;
+
+    top:-55px;
+
+    left:50%;
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#aaa;
+
+    opacity:0;
+}
+
+.smoke.active{
+
+    animation:
+        smokeRise
+        3s ease-out;
+}
+
+@keyframes smokeRise{
+
+    0%{
+        opacity:.6;
+        transform:
+            translate(-50%,0)
+            scale(.5);
+    }
+
+    100%{
+        opacity:0;
+        transform:
+            translate(-50%,-100px)
+            scale(4);
+    }
+}
+
+
+/* =====================================================
+   MICROPHONE BUTTON
+===================================================== */
+
+.blow-button{
+
+    margin-top:45px;
+
+    padding:
+        16px 28px;
+
+    border-radius:50px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.18);
+
+    background:
+        rgba(255,255,255,.06);
+
+    color:white;
+
+    font-size:12px;
+
+    letter-spacing:.5px;
+
+    cursor:pointer;
+
+    backdrop-filter:blur(15px);
+
+    transition:.4s;
+}
+
+.blow-button:hover{
+
+    transform:
+        translateY(-3px);
+
+    background:
+        rgba(255,255,255,.12);
+}
+
+.blow-button.active{
+
+    border-color:#e891b5;
+
+    box-shadow:
+        0 0 30px
+        rgba(255,100,170,.2);
+}
+
+.mic-status{
+
+    min-height:20px;
+
+    margin-top:14px;
+
+    color:#877986;
+
+    font-size:11px;
+}
+
+
+/* =====================================================
+   FINAL MESSAGE
+===================================================== */
+
+.final-message{
+
+    padding:
+        120px 20px;
+
+    text-align:center;
+}
+
+.final-card{
+
+    max-width:720px;
+
+    margin:auto;
+
+    padding:
+        50px 28px;
+
+    border-radius:25px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(111,38,79,.35),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+.final-card p{
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:18px;
+
+    line-height:2;
+
+    color:#d1c0ca;
+}
+
+.final-card strong{
+
+    color:#f1c3d8;
+
+    font-weight:400;
+}
+
+
+/* =====================================================
+   LAST SCREEN
+===================================================== */
+
+.last{
+
+    min-height:100svh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #642442,
+            transparent 60%
+        );
+}
+
+.last h1{
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-weight:400;
+
+    font-size:
+        clamp(45px,12vw,90px);
+
+    line-height:1.15;
+
+    color:#f2ccdc;
+
+    text-shadow:
+        0 0 30px
+        rgba(255,100,170,.4);
+}
+
+.last p{
+
+    margin-top:25px;
+
+    color:#ad9da9;
+
+    font-size:14px;
+
+    line-height:2;
+}
+
+.last-heart{
+
+    margin-top:30px;
+
+    font-size:55px;
+
+    animation:
+        heartBeat
+        1.5s infinite;
+}
+
+@keyframes heartBeat{
+
+    50%{
+        transform:scale(1.2);
+    }
+}
+
+
+/* =====================================================
+   MUSIC CONTROL
+===================================================== */
+
+.music-button{
+
+    position:fixed;
+
+    right:18px;
+
+    bottom:18px;
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+    background:
+        rgba(25,12,22,.75);
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    z-index:500;
+
+    backdrop-filter:blur(15px);
+
+    transition:.4s;
+}
+
+.music-button:hover{
+
+    transform:scale(1.08);
+}
+
+.music-button.playing{
+
+    box-shadow:
+        0 0 0 5px
+        rgba(235,145,185,.07),
+
+        0 0 25px
+        rgba(235,145,185,.3);
+}
+
+
+/* =====================================================
+   HEARTS
+===================================================== */
+
+.heart{
+
+    position:fixed;
+
+    bottom:-30px;
+
+    z-index:9000;
+
+    pointer-events:none;
+
+    animation:
+        heartFloat
+        5s linear forwards;
+}
+
+@keyframes heartFloat{
+
+    0%{
+        opacity:0;
+
+        transform:
+            translateY(0)
+            scale(.6);
+    }
+
+    15%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+
+        transform:
+            translateY(-110vh)
+            scale(1.5)
+            rotate(360deg);
+    }
+}
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+.confetti{
+
+    position:fixed;
+
+    top:-20px;
+
+    width:8px;
+
+    height:12px;
+
+    z-index:10000;
+
+    animation:
+        confettiFall
+        4s linear forwards;
+}
+
+@keyframes confettiFall{
+
+    to{
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity:0;
+    }
+}
+
+
+/* =====================================================
+   POP SPARKS
+===================================================== */
+
+.spark{
+
+    position:fixed;
+
+    z-index:10001;
+
+    pointer-events:none;
+
+    color:#ff9bc5;
+
+    font-size:18px;
+
+    transition:
+        1s ease;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+    .cake{
+
+        width:225px;
+    }
+
+    .cake-area{
+
+        height:360px;
+    }
+
+    .candle{
+
+        bottom:240px;
+    }
+
+    .special-card,
+    .final-card{
+
+        padding:
+            35px 22px;
+    }
+
+    .special-card p,
+    .final-card p{
+
+        font-size:16px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<div id="intro">
+
+    <div class="intro-content">
+
+        <div class="intro-line"></div>
+
+        <div class="intro-small">
+            A little surprise for
+        </div>
+
+        <div class="intro-name">
+            Nainshi
+        </div>
+
+        <div class="intro-text">
+
+            I made something a little special
+            for your birthday. ❤️
+            <br>
+            So take a moment...
+            and open it.
+
+        </div>
+
+        <button
+            class="enter-btn"
+            onclick="startExperience()">
+
+            OPEN YOUR SURPRISE ✨
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     MUSIC
+===================================================== -->
+
+<audio
+    id="music"
+    loop
+    preload="auto">
+
+    <source
+        src="music.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<div id="main">
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+
+    <div class="balloon-area">
+
+        <div class="balloon"></div>
+
+        <div class="balloon"></div>
+
+        <div class="balloon"></div>
+
+        <div class="balloon"></div>
+
+    </div>
+
+
+    <div class="hero-content">
+
+        <div class="hero-date">
+            01 • SEPTEMBER • 2026
+        </div>
+
+        <h1>
+            Happy Birthday
+        </h1>
+
+        <div class="hero-name">
+            Nainshi ❤️
+        </div>
+
+        <p class="hero-description">
+
+            Today is all about celebrating
+            someone who is genuinely
+            special to me.
+
+        </p>
+
+    </div>
+
+
+    <div class="scroll">
+        SCROLL ↓
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MESSAGE 1
+===================================================== -->
+
+<section class="section special">
+
+    <div class="container">
+
+        <div class="eyebrow">
+            A little something
+        </div>
+
+        <h2 class="title">
+
+            Some people just make
+            life a little better.
+
+        </h2>
+
+        <p class="description">
+
+            And you're definitely one of
+            those people.
+
+        </p>
+
+
+        <div class="special-card">
+
+            <p>
+
+                I don't know if I say it enough,
+                but I'm <strong>really lucky to have you
+                in my life.</strong>
+
+                <br><br>
+
+                You're someone who can make an
+                ordinary conversation feel special,
+                and somehow even the smallest
+                moments become memories worth
+                remembering.
+
+                <br><br>
+
+                You genuinely mean a lot to me,
+                and I'm really grateful that
+                you're a part of my life.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CAKE
+===================================================== -->
+
+<section class="cake-section">
+
+    <div class="cake-container">
+
+        <div class="eyebrow">
+            MAKE A WISH
+        </div>
+
+        <h2 class="title">
+            One little thing...
+        </h2>
+
+        <p class="description">
+
+            There's a candle waiting for you.
+            <br>
+            Make a wish and blow it out. 🎂
+
+        </p>
+
+
+        <div class="cake-area">
+
+
+            <!-- CANDLE -->
+
+            <div class="candle">
+
+                <div
+                    class="flame"
+                    id="flame">
+                </div>
+
+                <div
+                    class="smoke"
+                    id="smoke">
+                </div>
+
+            </div>
+
+
+            <!-- CAKE -->
+
+            <div class="cake">
+
+                <div class="cake-top"></div>
+
+                <div class="cream"></div>
+
+                <div class="cake-line"></div>
+
+                <div class="cake-message">
+                    Make a Wish ✨
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <button
+            class="blow-button"
+            id="blowButton"
+            onclick="enableMicrophone()">
+
+            🎤 ENABLE MICROPHONE
+
+        </button>
+
+
+        <div
+            class="mic-status"
+            id="micStatus">
+
+            Tap above and allow microphone access.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MESSAGE 2
+===================================================== -->
+
+<section class="final-message">
+
+    <div class="final-card">
+
+        <div class="eyebrow">
+            JUST SO YOU KNOW
+        </div>
+
+        <p>
+
+            I hope you always remember
+            how special you are.
+
+            <br><br>
+
+            I hope you keep that beautiful smile,
+            keep believing in yourself and never
+            stop going after the things that make
+            you happy.
+
+            <br><br>
+
+            Life won't always be perfect,
+            but I hope it always gives you
+            enough reasons to smile.
+
+            <br><br>
+
+            And whenever you look back at this day,
+            I hope it makes you smile a little.
+
+            <br><br>
+
+            <strong>
+                I'm really lucky to have you in my life,
+                Nainshi. ❤️
+            </strong>
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL SCREEN
+===================================================== -->
+
+<section class="last">
+
+    <div>
+
+        <div class="eyebrow">
+            ONE LAST THING
+        </div>
+
+        <h1>
+
+            Happy Birthday,
+            <br>
+            Nainshi ✨
+
+        </h1>
+
+        <p>
+
+            May you get all the happiness
+            you deserve.
+            <br><br>
+
+            Keep smiling.
+            Always. ❤️
+
+        </p>
+
+        <div class="last-heart">
+            ❤️
+        </div>
+
+    </div>
+
+</section>
+
+
+</div>
+
+
+<!-- =====================================================
+     MUSIC BUTTON
+===================================================== -->
+
+<button
+    class="music-button"
+    id="musicButton"
+    onclick="toggleMusic()">
+
+    ♫
+
+</button>
+
+
+
+<script>
+
+/* =====================================================
+   ELEMENTS
+===================================================== */
+
+const intro =
+    document.getElementById("intro");
+
+const main =
+    document.getElementById("main");
+
+const music =
+    document.getElementById("music");
+
+const musicButton =
+    document.getElementById("musicButton");
+
+const flame =
+    document.getElementById("flame");
+
+const smoke =
+    document.getElementById("smoke");
+
+const blowButton =
+    document.getElementById("blowButton");
+
+const micStatus =
+    document.getElementById("micStatus");
+
+
+let microphoneActive = false;
+
+let candleBlown = false;
+
+let audioContext;
+
+let analyser;
+
+let microphone;
+
+
+/* =====================================================
+   START WEBSITE
+===================================================== */
+
+function startExperience(){
+
+    /*
+       Music starts after user taps.
+       This is required by most mobile browsers.
+    */
+
+    music.play()
+        .then(function(){
+
+            musicButton.innerHTML="🔊";
+
+            musicButton.classList
+                .add("playing");
+
+        })
+        .catch(function(){
+
+            console.log(
+                "Music playback blocked."
+            );
+
+        });
+
+
+    intro.classList.add("hide");
+
+
+    setTimeout(function(){
+
+        main.classList.add("show");
+
+    },400);
+
+
+    startHearts();
+
+}
+
+
+/* =====================================================
+   MUSIC
+===================================================== */
+
+function toggleMusic(){
+
+    if(music.paused){
+
+        music.play();
+
+        musicButton.innerHTML="🔊";
+
+        musicButton.classList
+            .add("playing");
+
+    }
+
+    else{
+
+        music.pause();
+
+        musicButton.innerHTML="♫";
+
+        musicButton.classList
+            .remove("playing");
+
+    }
+
+}
+
+
+/* =====================================================
+   MICROPHONE
+===================================================== */
+
+async function enableMicrophone(){
+
+    if(candleBlown){
+
+        return;
+
+    }
+
+
+    if(microphoneActive){
+
+        micStatus.innerHTML =
+            "🎤 Listening... Blow toward your phone!";
+
+        return;
+
+    }
+
+
+    try{
+
+        micStatus.innerHTML =
+            "Requesting microphone permission...";
+
+
+        /*
+           Ask browser for microphone.
+        */
+
+        const stream =
+            await navigator
+                .mediaDevices
+                .getUserMedia({
+                    audio:true
+                });
+
+
+        /*
+           Create audio context.
+        */
+
+        audioContext =
+            new (
+                window.AudioContext ||
+                window.webkitAudioContext
+            )();
+
+
+        analyser =
+            audioContext
+                .createAnalyser();
+
+
+        analyser.fftSize=1024;
+
+
+        microphone =
+            audioContext
+                .createMediaStreamSource(
+                    stream
+                );
+
+
+        microphone.connect(
+            analyser
+        );
+
+
+        microphoneActive=true;
+
+
+        blowButton.innerHTML =
+            "🎤 BLOW INTO YOUR PHONE";
+
+        blowButton.classList
+            .add("active");
+
+
+        micStatus.innerHTML =
+            "Listening... Take a breath and blow! 💨";
+
+
+        detectBlow();
+
+    }
+
+    catch(error){
+
+        console.log(error);
+
+        micStatus.innerHTML =
+            "❌ Microphone permission denied. " +
+            "Please allow microphone access.";
+
+    }
+
+}
+
+
+/* =====================================================
+   DETECT BLOW
+===================================================== */
+
+function detectBlow(){
+
+    if(!microphoneActive){
+
+        return;
+
+    }
+
+
+    if(candleBlown){
+
+        return;
+
+    }
+
+
+    const data =
+        new Uint8Array(
+            analyser.fftSize
+        );
+
+
+    analyser.getByteTimeDomainData(
+        data
+    );
+
+
+    let sum=0;
+
+
+    for(
+        let i=0;
+        i<data.length;
+        i++
+    ){
+
+        const value =
+            (data[i]-128)/128;
+
+        sum +=
+            value*value;
+
+    }
+
+
+    const rms =
+        Math.sqrt(
+            sum/data.length
+        );
+
+
+    /*
+       Blow threshold.
+
+       If your phone needs a stronger
+       or softer blow, change 0.20.
+    */
+
+    if(rms > 0.20){
+
+        blowOutCandle();
+
+        return;
+
+    }
+
+
+    requestAnimationFrame(
+        detectBlow
+    );
+
+}
+
+
+/* =====================================================
+   CANDLE BLOWN
+===================================================== */
+
+function blowOutCandle(){
+
+    if(candleBlown){
+
+        return;
+
+    }
+
+
+    candleBlown=true;
+
+
+    /* Flame disappears */
+
+    flame.classList
+        .add("off");
+
+
+    /* Smoke */
+
+    smoke.classList
+        .add("active");
+
+
+    blowButton.innerHTML =
+        "✨ WISH MADE";
+
+
+    micStatus.innerHTML =
+        "Your wish has been sent into the universe. ❤️";
+
+
+    /*
+       Pop all balloons.
+    */
+
+    document
+        .querySelectorAll(".balloon")
+        .forEach(function(
+            balloon,
+            index
+        ){
+
+            setTimeout(function(){
+
+                createPopEffect(
+                    balloon
+                );
+
+                balloon.classList
+                    .add("popped");
+
+            },index*180);
+
+        });
+
+
+    /*
+       Celebration.
+    */
+
+    launchConfetti();
+
+
+    for(
+        let i=0;
+        i<25;
+        i++
+    ){
+
+        setTimeout(
+            createHeart,
+            i*100
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   BALLOON POP
+===================================================== */
+
+function createPopEffect(
+    balloon
+){
+
+    const rect =
+        balloon.getBoundingClientRect();
+
+
+    for(
+        let i=0;
+        i<12;
+        i++
+    ){
+
+        const spark =
+            document.createElement(
+                "div"
+            );
+
+
+        spark.className="spark";
+
+        spark.innerHTML="✦";
+
+
+        spark.style.left =
+            (
+                rect.left +
+                rect.width/2
+            )+"px";
+
+
+        spark.style.top =
+            (
+                rect.top +
+                rect.height/2
+            )+"px";
+
+
+        document.body
+            .appendChild(spark);
+
+
+        setTimeout(function(){
+
+            spark.style.transform =
+                "translate(" +
+                (
+                    Math.random()*150-75
+                ) +
+                "px," +
+                (
+                    Math.random()*150-75
+                ) +
+                "px) scale(.2)";
+
+
+            spark.style.opacity="0";
+
+        },30);
+
+
+        setTimeout(function(){
+
+            spark.remove();
+
+        },1100);
+
+    }
+
+}
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+function launchConfetti(){
+
+    for(
+        let i=0;
+        i<130;
+        i++
+    ){
+
+        setTimeout(
+            createConfetti,
+            i*15
+        );
+
+    }
+
+}
+
+
+function createConfetti(){
+
+    const piece =
+        document.createElement(
+            "div"
+        );
+
+
+    piece.className=
+        "confetti";
+
+
+    piece.style.left =
+        Math.random()*100+
+        "vw";
+
+
+    const colors=[
+        "#ff74b5",
+        "#ffd166",
+        "#ffffff",
+        "#ffb4d0",
+        "#d6a5ff"
+    ];
+
+
+    piece.style.background =
+        colors[
+            Math.floor(
+                Math.random()*
+                colors.length
+            )
+        ];
+
+
+    piece.style.animationDuration =
+        (
+            2+
+            Math.random()*3
+        )+"s";
+
+
+    document.body
+        .appendChild(piece);
+
+
+    setTimeout(function(){
+
+        piece.remove();
+
+    },6000);
+
+}
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+function createHeart(){
+
+    const heart =
+        document.createElement(
+            "div"
+        );
+
+
+    heart.className=
+        "heart";
+
+
+    const emojis=[
+        "❤️",
+        "💗",
+        "💕",
+        "💖",
+        "✨",
+        "♡"
+    ];
+
+
+    heart.innerHTML =
+        emojis[
+            Math.floor(
+                Math.random()*
+                emojis.length
+            )
+        ];
+
+
+    heart.style.left =
+        Math.random()*100+
+        "vw";
+
+
+    heart.style.fontSize =
+        (
+            12+
+            Math.random()*20
+        )+"px";
+
+
+    heart.style.animationDuration =
+        (
+            4+
+            Math.random()*4
+        )+"s";
+
+
+    document.body
+        .appendChild(heart);
+
+
+    setTimeout(function(){
+
+        heart.remove();
+
+    },8000);
+
+}
+
+
+function startHearts(){
+
+    setInterval(
+        createHeart,
+        900
+    );
+
+}
+
+
+/* =====================================================
+   CLICK BALLOON
+===================================================== */
+
+document
+    .querySelectorAll(".balloon")
+    .forEach(function(balloon){
+
+        balloon.addEventListener(
+            "click",
+            function(){
+
+                if(
+                    balloon.classList
+                    .contains("popped")
+                ){
+
+                    return;
+
+                }
+
+
+                createPopEffect(
+                    balloon
+                );
+
+
+                balloon.classList
+                    .add("popped");
+
+            }
+        );
+
+    });
+
+</script>
+
+</body>
+</html>
